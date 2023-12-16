@@ -19,6 +19,8 @@ public class Pago {
     private String forma_pago;
     private LocalDateTime fecha;
 
-    @OneToMany(mappedBy = "pago", cascade = CascadeType.ALL)
-    private Set<Reserva> reservaspago;
-}
+    @OneToOne
+    @JoinColumn(name = "id_Reserva")
+    private Reserva reservaPag;
+
+ }

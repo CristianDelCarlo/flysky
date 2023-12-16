@@ -21,14 +21,10 @@ public class Vuelo {
     private Long precio;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "id_nro_vuelo", nullable = false)
+    @JoinColumn(name = "id_Nro_Vuelo", nullable = false)
     private Num_vuelo num_vuelo;
 
-    @ManyToMany(mappedBy = "vuelo")
-    private Set<Asiento> asientos;
-
-    @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "id_nro_vuelo", nullable = false)
+    @OneToMany(mappedBy = "vuelo")
     private Set<Pasaje> pasajes;
 
 }

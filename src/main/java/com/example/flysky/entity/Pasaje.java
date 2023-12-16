@@ -15,19 +15,20 @@ public class Pasaje {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String asiento;
+    private String clase;
+
+    private Long precio;
+    private Double factor_Clase;
     private Long precio_final;
-    private Boolean reservado;
 
-    @OneToMany(mappedBy = "pasaje", cascade = CascadeType.ALL)
-    private Set<Asiento> asientospas;
+    @ManyToOne
+    @JoinColumn(name = "id_Vuelo")
+    private Vuelo vuelo;
 
-    @OneToMany(mappedBy = "pasaje", cascade = CascadeType.ALL)
-    private Set<Vuelo> vuelospas;
-
-    @ManyToMany(mappedBy = "pasaje")
-    private Set<Cliente> clientes;
-
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne
     @JoinColumn(name = "id_pasaje", nullable = false)
-    private Set<Reserva> reservas;
+    private Reserva reserva;
+
+
 }

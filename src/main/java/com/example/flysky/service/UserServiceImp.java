@@ -27,7 +27,7 @@ public class UserServiceImp implements IUserService{
         ModelMapper mapper = new ModelMapper();
         List<Vuelo> vuelosEnt = vueloRepository.findAll();
         List<VueloDto> vuelosDto = new ArrayList<>();
-        vuelosEnt.stream().forEach(c-> vuelosDto.add(mapper.map(c,VueloDto.class)));
+        vuelosEnt.forEach(c-> vuelosDto.add(mapper.map(c,VueloDto.class)));
         return vuelosDto;
 
     }

@@ -20,13 +20,48 @@ public class Reserva {
     private Integer nro_reserva;
     private Boolean es_contacto;
 
+
     @OneToMany(mappedBy = "reserva", cascade = CascadeType.ALL)
     private Set<Pasaje> pasajesres;
 
-    @OneToMany(mappedBy = "reserva", cascade = CascadeType.ALL)
-    private Set<Cliente> clientesres;
+    @ManyToOne
+    @JoinColumn(name = "id_cliente", referencedColumnName = "id")
+    private Cliente cliente;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "id_pago", nullable = false)
+
+    @OneToOne(mappedBy = "reservaPag", cascade = CascadeType.ALL)
     private Pago pago;
+
+/*
+    últimas configs:
+    @ManyToOne
+    @JoinColumn(name = "id_Pasaje", referencedColumnName = "id")
+    private Pasaje pasaje;
+
+    @ManyToOne
+    @JoinColumn(name = "id_Cliente", referencedColumnName = "id")
+    private Cliente cliente;
+
+
+    @ManyToOne
+    @JoinColumn(name = "id_Cliente")
+    private Cliente cliente;
+
+    @ManyToOne
+    @JoinColumn(name = "id_Pasaje")
+    private Pasaje pasaje;
+    */
+
+
+
+
+
+    /*
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "id_Pago", nullable = false)
+    private Pago pago;
+*/
+
+
+
 }

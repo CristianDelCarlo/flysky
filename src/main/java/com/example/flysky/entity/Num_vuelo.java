@@ -16,6 +16,7 @@ public class Num_vuelo {
     private Long id;
 
     private String aerolinea;
+    private String avion;
     private String aerop_salida;
     private String aerop_llegada;
     private LocalDateTime hora_salida;
