@@ -20,7 +20,7 @@ public class Vuelo {
     private LocalDateTime llegada;
     private Long precio;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne
     @JoinColumn(name = "id_Nro_Vuelo", nullable = false)
     private Num_vuelo num_vuelo;
 
