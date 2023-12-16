@@ -1,0 +1,11 @@
+[33mcommit 1765c52dd0d08374d89de44320c0759129ea122c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: CristianDelCarlo <cristiandelcarlo@yahoo.com.ar>
+Date:   Fri Dec 15 21:29:49 2023 -0300
+
+    Estructura de datos simplificada
+
+[33mcommit 1b5f7074a5ae9a8f7e28953e4d4e25c810490fd8[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: CristianDelCarlo <cristiandelcarlo@yahoo.com.ar>
+Date:   Wed Dec 13 21:57:19 2023 -0300
+
+    primer endpoint, no funcional
