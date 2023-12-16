@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import jakarta.persistence.*;
+
+import java.time.LocalDate;
 import java.util.Set;
 import java.time.LocalDateTime;
 
@@ -16,8 +18,8 @@ public class Vuelo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDateTime dia_salida;
-    private LocalDateTime llegada;
+    private LocalDate dia_salida;
+    //private LocalDateTime llegada;
     private Long precio;
 
     @ManyToOne

@@ -2,6 +2,8 @@ package com.example.flysky.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+
+import java.time.LocalTime;
 import java.util.Set;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
@@ -19,7 +21,7 @@ public class Num_vuelo {
     private String avion;
     private String aerop_salida;
     private String aerop_llegada;
-    private LocalDateTime hora_salida;
+    private LocalTime hora_salida;
     private Long duracion;
 
     @OneToMany(mappedBy = "num_vuelo", cascade = CascadeType.ALL)
